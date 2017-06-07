@@ -116,7 +116,6 @@ namespace maptool
             // for testing
             // return;
 
-
             // Done Load Table to DB
             bool b = true;
             await Task.Run(() => b = Parser.CreateTable()); 

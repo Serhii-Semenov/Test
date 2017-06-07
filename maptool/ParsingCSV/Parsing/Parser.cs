@@ -64,7 +64,6 @@ namespace ParsingCSV.Parsing
                 // DONE Try get param for this ColumnName, else Param[NoMapped]
                 ColMap.Add(new ColmnMapping(col, TryGetParam(col), GetExamples(col), new Err()));
                 // DONE To think about getExamles 
-                // TODO To think about getError 
             }
         }
 
@@ -123,11 +122,9 @@ namespace ParsingCSV.Parsing
                 }
 
                 // Имя колонки на симфолы
-                // string pattern = @"[0-9a-zA-Z_]";
-                string pattern = @"\w+";
-                var v1 = Regex.IsMatch(v.ColmnName, pattern, RegexOptions.IgnoreCase);
-                var v2 = Regex.IsMatch(v.ColmnName, @"\w+\s+\w*");
-                if (!v1 && v2)
+                var v1 = Regex.IsMatch(v.ColmnName, @"\W", RegexOptions.IgnoreCase); // false
+                var v2 = Regex.IsMatch(v.ColmnName, @"\s"); // space  is exist
+                if (v1 && !v2)
                 {
                     s += " " + v.ColmnName + " Некорректный.";
                 }
