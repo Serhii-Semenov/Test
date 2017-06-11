@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\ChekField.cs" />
     <Compile Include="Mapping\ColmnMapping.cs" />
     <Compile Include="Mapping\Err.cs" />
     <Compile Include="Mapping\Param.cs" />

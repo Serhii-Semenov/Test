@@ -1,10 +1,9 @@
 ﻿namespace ParsingCSV.Parsing
 {
-    public class ParserParams
+    public static class ParserParams
     {
-
-        public string[] stringSeparators { get; set; } = new string[] { "," };
-        public string[] stringShielding { get; set; } = new string[] { "", "" };
+        public static string[] stringSeparators { get; set; } = new string[] { "," };
+        public static string[] stringShielding { get; set; } = new string[] { "", "" };
     }
 
 }

@@ -12,6 +12,8 @@
 
         public bool LoadToDb { get; set; }
 
-        public string queryAdditive { get; set; } 
+        public string queryAdditive { get; set; }
+
+        public ChekField Field { get; set; }
     }
 }
